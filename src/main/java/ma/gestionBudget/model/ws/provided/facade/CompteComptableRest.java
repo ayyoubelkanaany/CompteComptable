@@ -20,7 +20,6 @@ import ma.gestionBudget.model.ws.provided.vo.CompteComptableVo;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class CompteComptableRest {
 	
 	@Autowired
@@ -34,7 +33,6 @@ public class CompteComptableRest {
 	public CompteComptableVo findByRefCompteComptable(@PathVariable String refCompteComptable) {
 		return ccConverter.toVo(compteComptableService.findByRefCompteComptable(refCompteComptable));
 	}
-
 	
 	@ApiOperation("Cette methode permet de lister l'ensemble des comptecomptable ")
 	@RequestMapping(value = "/CompteComptable",method= RequestMethod.GET)	
